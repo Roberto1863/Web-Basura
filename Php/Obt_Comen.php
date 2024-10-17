@@ -1,4 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: https://roberto1863.github.io/Web-Basura/");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 header('Content-Type: application/json');
 // Conexión a la base de datos MySQL
 $conn = new mysqli('localhost', 'root', '', 'comentarios');
