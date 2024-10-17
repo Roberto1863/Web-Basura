@@ -7,7 +7,7 @@ $(document).on('pageinit', '[data-role="page"]', function() {
         console.log('Requesting comments for product ID:', productId);
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: '../Php/Obt_Comen.php',
+                url: 'https://github.com/Roberto1863/Web-Basura/Php/Obt_Comen.php',
                 method: 'GET',
                 data: { productId: productId },
                 dataType: 'json',
@@ -65,7 +65,7 @@ $(document).on('pageinit', '[data-role="page"]', function() {
         var commentText = $form.find('#comment-text').val().trim();
         if (commentText) {                
                 $.ajax({
-                    url: '../Php/Agreg_Comen.php',
+                    url: 'https://github.com/Roberto1863/Web-Basura/Php/Agreg_Comen.php',
                     method: 'POST',
                     data: {
                         productId: productId,
