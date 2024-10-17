@@ -7,7 +7,7 @@ $(document).on('pageinit', '[data-role="page"]', function() {
         console.log('Requesting comments for product ID:', productId);
         return new Promise((resolve, reject) => {
             $.ajax({
-                url: 'https://cors-anywhere.herokuapp.com/http://localhost/App%20Basura/Php/Obt_Comen.php',
+                url: '../Php/Obt_Comen.php',
                 method: 'GET',
                 data: { productId: productId },
                 dataType: 'json',
@@ -65,7 +65,7 @@ $(document).on('pageinit', '[data-role="page"]', function() {
         var commentText = $form.find('#comment-text').val().trim();
         if (commentText) {                
                 $.ajax({
-                    url: 'https://cors-anywhere.herokuapp.com/http://localhost/App%20Basura/Php/Agreg_Comen.php',
+                    url: '../Php/Agreg_Comen.php',
                     method: 'POST',
                     data: {
                         productId: productId,
